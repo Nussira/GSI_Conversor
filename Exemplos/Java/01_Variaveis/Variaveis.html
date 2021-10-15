@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<body>
+    <script>
+        var name = "Maicon"; //string 
+        var age = 19; // num interiro
+        var salario = 1759.67; // ponto flutuante 
+        var professor = true; // boolean( true or false)
+
+        // fazer impressao no console
+        console.log("Meu nome é " + name + "e tenho " + age + " anos"); // fazer a impressao no console
+
+        //template literals - ESTE AQUI É MELHOR
+        console.log(`Meu nome é ${name} e tenho ${age} anos`);
+
+        //array
+        // primeiro da fila sempre é 0(zero)
+        var profissoes = ["Professor", "Cozinheiro", "Empresario", "Politico"];
+       
+        console.log(profissoes[2]); // Empresario
+        console.log(profissoes[0]); // Professor
+        console.log(profissoes[1]); // Cozinheiro
+       
+        //objetos
+        //nome da propriedade e valor da propriedade
+        var funcionario = [{nome: "Maicon", idade: 19, professor: true},    
+                           {nome: "Ana", idade: 19, professor: true}
+        ];
+
+        console.log(funcionario);
+        //estou acessadno no array, a posicao 1
+        // estou dentro do objeto e pegando o nome da funcionada
+        console.log(funcionario[1].nome);
+        console.log(funcionario[0].professor);
+
+        var pessoa = {
+            nome: "Maicon",
+            idade: 19,
+            programador: function() {
+                console.log('Programados Backend');
+            }
+        }
+        pessoa.programador();
+
+        //mostra a tipagem do elemento
+        console.log(typeof pessoa.nome);
+        console.log(typeof pessoa);
+
+        //variavel sem valor, tem o tipo undefined
+        var indefinido = undefined;
+        console.log(indefinido);
+        //variavel com valor vazio e do tipo string
+        var texto = "";
+        console.log(texto);
+        //em branco
+        var nulo = null;
+        console.log(nulo);
+
+        //tecnicos de manipulação de textos
+        var faculdade = "Antonio Meneghetti Faculdade";
+        console.log(faculdade.length); // contagem de caracteres
+        console.log(faculdade.toLowerCase()); // palavras em minuscolo
+        console.log(faculdade.toUpperCase()); // palavras em maisculo
+        console.log(faculdade.slice(8,18)) // palavras especifica da frase 
+        console.log(faculdade.replace("Faculdade", "Universidade")); //altera uma plavra 
+
+        var salario = 5000.54786;
+        console.log(salario.toString()); // transforma para string
+        console.log(salario.toFixed(2)); // arredondar as casas decimais
+
+        //Operações
+        var valorA = 10;
+        var valorB = 20;
+        var valorC = 30;
+        console.log(valorA + valorB); //soma
+        console.log(valorA - valorB); //subtracao
+        console.log(valorA * valorB); //multiplicação
+        console.log(valorA / valorB); //divisao
+
+        valorA += 2; //10 + 2
+        valorB *= 2; //20 * 2
+
+        var numeroX = 454.21;
+        console.log(Math.round(numeroX));
+        console.log(Math.random());
+        console.log(Math.random()*5);
+
+    </script>
+</body>
+</html>

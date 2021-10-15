@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+body{
+    background-color:rgb(78, 111, 211);
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: 
+                        "header header"
+                        "main aside"
+                        "footer footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    background-color:mediumblue;
+    padding: 12px 12px;/*top right bottom left*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-self: center;
+    align-items: center;
+}
+
+ul{
+    
+    display: flex;
+    list-style: none;
+    gap: .8rem;
+    align-items: center;
+
+}
+
+nav ul{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+    font-weight: bolder;
+}
+
+main{
+    grid-area: main;
+    height: 100vh;
+    background-color: purple;
+}
+
+aside{
+    grid-area: aside;
+    height: 100vh;
+    background-color: rgb(70, 255, 70);
+}
+
+footer{
+    grid-area: footer;
+    height: 120px;
+    background-color: red;
+}
+
+.sobre div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sobre div img{
+    width: 240px;
+    height: 240px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 240px;
+}

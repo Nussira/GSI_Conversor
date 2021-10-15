@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.content{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+                    "header"    
+                    "main"
+                    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+/*menu*/
+header{
+    grid-area: header;
+    background-color: #4484ce;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 24px;
+    justify-content: space-between; 
+}
+/*imagem do menu*/
+header img{
+    display: flex;
+    width: 180px;
+    height: auto;
+    justify-self: center;
+    justify-self: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+
+nav ul li{
+    font-weight: bolder;
+    font-size: larger;
+}
+/*cor do nome no menu*/
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/*coloca uma cor quando o mouse for em cima do nome*/
+a:hover{
+    color: #f19f4d;
+}
+
+main{
+    grid-area: main;
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #f7f8fa;
+    padding: 0px 72px 72px 72px;
+}
+
+.sobre img{
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+/*Caixinha do texto*/
+.sobre div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 18px 18px 4px;
+    border-radius: 4px;
+}
+
+/*Titulo ajust*/
+.sobre div h1{
+    font-weight: bolder;
+    text-align: justify;
+    padding: 0px 24px;
+}
+
+/*Config Texto*/
+.sobre div p{
+    width: 100%;
+    line-height: 2.5rem;
+    font-weight: bold;
+    text-align: justify;
+    padding: 12px 24px;
+}
+
+.portfolio{
+    background-color: #ffffff;
+    height: auto;
+}
+
+.portfolio p{
+    font-weight: bolder;
+    text-align: center;
+    margin: 64px;
+    padding: 8px 0px;
+    font-size: 3rem;
+    border-bottom: 3px solid #000000;
+}
+
+.portfolio div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-bottom: 48px;
+}
+
+.portfolio img{
+    width: 280px;
+    height: auto;
+    margin: 12px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.skills{
+    background-color: #f7f8fa;
+    height: auto;
+    padding-top: 4px;
+}
+
+.skills p{
+    font-weight: bolder;
+    text-align: center;
+    margin: 64px;
+    padding: 8px 0px;
+    font-size: 3rem;
+    border-bottom: 3px solid #000000;
+}
+
+.skills div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.skills img{
+    width: 280px;
+    height: auto;
+    margin: 12px;
+    margin-bottom: 64px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contato{
+    background-color: #ffffff;
+    padding: 64px;
+}
+
+form{
+    border: 2px solid #000000;
+    margin: 4px;
+    padding: 24px;
+    background-color: #f7f8fa;
+    border-radius: 4px;
+}
+
+#titulo{
+    font-size: 40px;
+    color: #000000;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px 0px;
+}
+
+form legend{
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+form fieldset{
+    color: #000000;
+    font-weight: bold;
+    margin: 20px 0px;
+    padding: 24px;
+}
+
+form label{
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+form input, select, textarea{
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000000;
+    min-width: 250px;
+}
+
+#botao{
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    align-items: center;
+    justify-items: center;
+}
+
+#botao:hover{
+    background-color: #f19f4d;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #4484ce;
+    color: #ffffff;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    justify-items: flex-end;
+    align-items: flex-end;
+}
+
+footer div{
+    padding: 8px 0px;
+}
+
+footer p{
+    padding: 8px 0px 0px 0px;
+    font-weight: bolder; 
+}
+
+@media only screen and (max-width: 800px) {
+
+    header{
+        flex-direction: column;
+        padding: 8px 8px;
+    }
+
+    nav{
+        padding: 0px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li{
+        padding: 8px 0px;
+    }
+    
+    nav ul li:first-child{
+        padding: 36px 0px 0px 0px;
+    }
+
+    .sobre{
+        display: inline-table;
+        padding: 0px 72px 72px 72px;
+    }
+
+    .sobre img{
+        width: auto;
+        height: auto;
+        margin: 24px;
+    }
+}

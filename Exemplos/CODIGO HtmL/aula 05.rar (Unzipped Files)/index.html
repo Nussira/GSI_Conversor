@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Básico</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--Importação do CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+
+            <img src="images/logo.png" alt="logo" />
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="sobre" class="sobre">
+                <img src="images/perfil.jpg" />
+                <div>
+                    <h1>
+                        Felipe Becker Nunes - nunesfb@gmail.com
+                    </h1>
+                    <p>
+                        Doutor em Informática na Educação pelo Programa de Pós-Graduação em Informática na Educação
+                        (PPGIE) na Universidade Federal do Rio Grande do Sul (UFRGS). Mestre em Ciência da Computação
+                        pelo Programa de Pós-Graduação em Informática (PPGI) da Universidade Federal (UFSM) de Santa
+                        Maria (2014). Bacharel em Sistemas de Informação na Universidade Luterana do Brasil (ULBRA -
+                        Santa Maria) no ano de 2012. Professor na Antonio Meneghetti Faculdade. Integrante como
+                        pesquisador do Grupo de Redes de Computadores e Computação Aplicada (GRECA) e do Grupo de
+                        Trajetórias de Aprendizagem em Hiperdocumentos Ubíquo (TRAPHU). Tem experiência com Mundos
+                        Virtuais, Agentes Pedagógicos, Ambientes Virtuais de Aprendizagem, Educação a Distância,
+                        Computação Móvel e Ubíqua, Contexto e Qualidade do Contexto, Trajetórias de Aprendizagem
+                    </p>
+                </div>
+            </section>
+
+            <section id="portfolio" class="portfolio">
+                <p>Portfólio | Principais Trabalhos</p>
+                <div>
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                    <img src="images/capa.png" />
+                </div>
+            </section>
+
+            <section id="skills" class="skills">
+                <p>Skills | Principais Habilidades</p>
+                <div>
+                    <img src="images/html_css.jpg" />
+                    <img src="images/javascript.png" />
+                    <img src="images/typescript.png" />
+                    <img src="images/php.png" />
+                    <img src="images/nodejs.png" />
+                    <img src="images/reactjs.png" />
+                </div>
+            </section>
+
+            <section id="contato" class="contato">
+                <form method="GET" action="#">
+                    <div id="titulo">Cadastro de Usuário</div>
+                    <fieldset>
+                        <legend>Conta do Usuário</legend>
+                        <div>
+                            <label> E-mail: </label>
+                            <input type="email" minlength="5" maxlength="256" name="email" required
+                                placeholder="Insira seu e-mail aqui" />
+                        </div>
+
+                        <div>
+                            <label> Senha: </label>
+                            <input type="password" name="senha" required placeholder="Insira sua senha aqui" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do Usuário</legend>
+                        <div>
+                            <label> Nome: </label>
+                            <input type="text" name="name" required placeholder="Insira seu nome aqui" />
+                        </div>
+
+                        <div>
+                            <label> Telefone: </label>
+                            <!-- https://regex101.com/ e o http://www.regexlib.com/(X(1)A(1eI7Wzgg4FH05VnMsHnCEMf-JwblHDkHr-O7RNkOZ14b_mJtIeZKm5aqTTTtzFMvPvI_CjkX_5Ey1NQiIHg-qUmkR34tOEI5EqNxPhlAgKFRNGoqg2G2I7MerZsOZZZNuwbYBKMJEIUx-ETR-NF78OFMD_vFEDcBESJdr9HSjChncdYlzxOLpAyg2odsu_R90))/?AspxAutoDetectCookieSupport=1 -->
+                            <input type="text" pattern="\([0-9]\)[\s][0-9]-[0-9]" name="telefone" required
+                                placeholder="Ex: (00) 00000-0000" />
+                        </div>
+
+                        <div>
+                            <label> Sexo: </label>
+                            <label for="rdMasc">Masculino</label>
+                            <input type="radio" checked id="rdMasc" name="sexo" value="Masculino" />
+                            <label for="rdFem">Feminino</label>
+                            <input type="radio" id="rdFem" name="sexo" value="Feminino" />
+                        </div>
+
+                        <div>
+                            <label> Data de Nascimento: </label>
+                            <input type="date" name="dtNasc" required />
+                        </div>
+
+                        <div>
+                            <label> Foto de Perfil: </label>
+                            <input type="file" name="foto" accept="image/*" required />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados de Endereço</legend>
+
+                        <div>
+                            <label> Rua: </label>
+                            <input type="text" name="rua" required placeholder="Insira a rua aqui" />
+                        </div>
+
+                        <div>
+                            <label> Número: </label>
+                            <input type="number" name="numero" min="1" max="9999" required
+                                placeholder="Insira o número da rua aqui" />
+                        </div>
+
+                        <div>
+                            <label> Complemento: </label>
+                            <input type="text" name="complemento" placeholder="Insira o complemento da rua aqui" />
+                        </div>
+
+                        <div>
+                            <label> Cidade: </label>
+                            <input type="text" name="cidade" required placeholder="Insira sua cidade aqui" />
+                        </div>
+
+                        <div>
+                            <label> Estado: </label>
+                            <select name="estado">
+                                <option value="rs" selected>Rio Grande do Sul</option>
+                                <option value="sc">Santa Catarina</option>
+                                <option value="pr">Paraná</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Informação</legend>
+
+                        <div>
+                            <label>Como conheceu a nossa empresa:</label>
+                            <textarea name="mensagem" required maxlength="256"
+                                placeholder="Insira sua mensagem"></textarea>
+                        </div>
+
+                        <div>
+                            <label>Deseja receber ofertas por e-mail?</label>
+                            <input checked type="checkbox" name="ofertaEmail" value="Sim" />
+                        </div>
+                    </fieldset>
+
+                    <div style="text-align: center">
+                        <input type="submit" id="botao" value="Enviar dados" />
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <p>
+                    Estrada Recanto Maestro, nº 338, Restinga Sêca-RS, 97200-000, Brasil
+                </p>
+                <p>
+                    © Copyright Prof. Felipe (AMF). All Rights Reserved
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

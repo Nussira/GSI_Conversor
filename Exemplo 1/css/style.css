@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background: url("../imagen/lofi.jpg") no-repeat center;*/
+    background-image: url("../imagen/lofi.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid green;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas:
+                        "header header"
+                        "main aside"
+                        "footer footer"
+    ;
+}
+
+header {
+    grid-area: header;
+    background-color: pink;
+    padding: 12px 12px 12px 12px; /*top right botton left*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    width: 70vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+header div img{
+    width: 100px;
+    height: 100px;
+}
+
+main{
+    grid-area: main;
+    /*height: 100vh;*/
+    background-color: purple;
+}
+
+aside{
+    grid-area: aside;
+    /*height: 100vh;*/
+    background-color: rgb(47, 92, 47)
+}
+
+footer{
+    grid-area: footer;
+    /*height: 100vh;*/
+    background-color: orange;
+}
+
+nav ul li{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+}
+
+.Sobre div img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 8px;
+}

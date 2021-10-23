@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Livvic', sans-serif;
 }
 
 ul{
@@ -26,7 +27,7 @@ img{
     ;
 }
 body{
-    background-color: rgb(160,160,160);
+    background-color: rgb(200,200,200);
 }
 header {
     grid-area: header;
@@ -48,5 +49,22 @@ main img{
 
 aside {
     grid-area: aside;
-    background-color: rgb(160,160,160);
+    background-color: rgb(200,200,200);
+}
+
+aside h1 {
+    color: rgb(46,169,195);
+    padding: 30px 20px;
+    font-size: 50px;
+}
+
+aside button {
+    border-radius: 10px 10px 10px 10px;
+    width: 100px;
+    height: 40px;
+    font-size: large;
+}
+
+aside button:hover{
+    background-image: linear-gradient(360deg,rgb(48,87,163),rgb(46,169,195));
 }

@@ -58,6 +58,22 @@ aside h1 {
     font-size: 50px;
 }
 
+aside h3 {
+    color: rgb(46,140,150);
+    padding: 15px 20px;
+}
+
+#borderDemo {
+    border: 3px outset #1C6EA4;
+    border-radius: 6px;
+    padding: 10px 10px;
+    width: 330px;
+    }
+
+#banco {
+    color:red;
+}
+
 aside button {
     border-radius: 10px 10px 10px 10px;
     width: 100px;
